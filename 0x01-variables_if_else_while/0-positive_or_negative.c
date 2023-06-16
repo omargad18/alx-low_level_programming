@@ -4,11 +4,11 @@
 
 
 /**
- * main - entry point
+ * main - Entry point
  *
  * Description: positive or negative
  *
- * Return : 0 (Success)
+ * Return: Always 0 (Success)
 */
 
 int main(void)
@@ -19,7 +19,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("%i is postive\n", n);
+		printf("%i is positive\n", n);
 	}
 	else if (n == 0)
 	{
