@@ -10,9 +10,10 @@
 
 int main(void)
 {
+	int i;
 	unsigned long a = 1, b = 2, sum = 0;
 
-	for (int i = 0; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		printf("%lu", a);
 		sum = a + b;
