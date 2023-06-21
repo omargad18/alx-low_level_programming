@@ -10,20 +10,18 @@ void times_table(void)
 
 	for (row = 0; row <= 9; row++)
 	{
-		_putchar(48);
 		for (num = 1; num <= 9; num++)
 		{
+			result = row * num;
 			_putchar(',');
 			_putchar(' ');
-
-			result = row * num;
 
 			if (result <= 9)
 				_putchar(' ');
 			else
-				_putchar(result / 10) + 48);
+				_putchar((result / 10) + 48);
 
-			_putchar(result % 10) + 48);
+			_putchar((result % 10) + 48);
 		}
 		_putchar('\n');
 	}
