@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	int a = 0, b = 1, sum = 0, even_sum, i;
+	int a = 0, b = 1, sum = 0, even_sum;
 
 	while (1)
 	{
