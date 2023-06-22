@@ -6,14 +6,10 @@
  * @a: input first integer
  * @b: input second integer
  *
- * Return: Always 0 (Success)
+ * Return: return result
 */
 
 int mul(int a, int b)
 {
-	int result;
-
-	result = a * b;
-
-	return (0);
+	return (a * b);
 }
