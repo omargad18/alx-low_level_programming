@@ -10,7 +10,7 @@ void more_numbers(void)
 {
 	int num, row, col;
 
-	for (row = 0; row < 10; row++)
+	for (row = 1; row <= 10; row++)
 	{
 		for (col = 0; col <= 14; col++)
 		{
@@ -20,7 +20,8 @@ void more_numbers(void)
 				_putchar(1 + 48);
 				num = col % 10;
 			}
-			_putchar('\n');
+			_putchar(num + 48);
 		}
+		_putchar('\n');
 	}
 }
