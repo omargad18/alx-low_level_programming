@@ -12,26 +12,29 @@
 
 int main(void)
 {
-	int i, num;
+	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
-		num = i;
-
-		if (num % 15 == 0)
+		if (i % 15 == 0)
 		{
 			printf("FizzBuzz ");
 		}
-		else if (num % 3 == 0)
+		else if (i % 3 == 0)
 		{
 			printf("Fizz ");
 		}
-		else if (num % 5 == 0)
+		else if (i % 5 == 0)
 		{
 			printf("Buzz ");
 		}
 		else
-			printf("%d ", num);
+			printf("%d ", i);
+		if (i != 100)
+		{
+			printf(" ");
+		}
+		else
+			printf("\n");
 	}
-	printf("\n");
 }
