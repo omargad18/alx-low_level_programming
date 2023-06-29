@@ -6,7 +6,7 @@
  * @dest: pointer to destination input
  * @src: pointer to source input
  *
- * Return: pointer to resulting string /2dest
+ * Return: pointer to resulting string @dest
 */
 
 char *_strcat(char *dest, char *src)
@@ -19,7 +19,7 @@ char *_strcat(char *dest, char *src)
 		c++;
 
 	for (c2 = 0; src[c2]; c2++)
-		dest[c++] = src[cw];
+		dest[c++] = src[c2];
 
 	return (dest);
 }
