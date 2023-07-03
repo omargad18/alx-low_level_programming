@@ -9,7 +9,7 @@
  * Return: pointer in s that matches one of bytes in accept or NULL
 */
 
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
 	char *p;
