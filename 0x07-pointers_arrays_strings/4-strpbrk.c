@@ -25,9 +25,9 @@ char *_strpbrk(char *s, char *accept);
 				pointer = &s[i];
 				return (pointer);
 			}
-			j++
+			j++;
 		}
-		i++
+		i++;
 	}
 
 	return (0);
