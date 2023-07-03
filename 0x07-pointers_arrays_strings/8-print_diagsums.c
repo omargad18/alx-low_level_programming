@@ -9,14 +9,14 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, string1 = 0; string2 = 0;
+	int i, str1 = 0; str2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		string1 = string1 + a[i];
-		string2 = string2 + a[size - i - 1];
-		a = a + size;
+		str1 += a[i];
+		str2 += a[size - i - 1];
+		a += size;
 	}
-	printf("%d", string1);
-	printf("%d\n", string2);
+	printf("%d, ", str1);
+	printf("%d\n", str2);
 }
