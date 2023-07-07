@@ -11,11 +11,9 @@
  * Return: Always 0
 */
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[] _attribute_((unused)))
 {
-	(void)argc;
 	printf("%d\n", argc - 1);
 
 	return (0);
 }
-
