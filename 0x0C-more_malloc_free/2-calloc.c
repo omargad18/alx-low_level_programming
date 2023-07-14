@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * *_memset - function that fill memory with a constant
- *
+ * _memset - function that fill memory with a constant
  * @p: pointer to the constant
  * @c: constant
  * @n: max bytes
@@ -21,7 +20,7 @@ char *_memset(char *p, char c, unsigned int n)
 }
 
 /**
- * *_calloc - function that allocate memory for an array, using malloc
+ * _calloc - function that allocate memory for an array, using malloc
  *
  * @nmemb: array length
  * @size: size of each element
