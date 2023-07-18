@@ -3,21 +3,21 @@
 
 /**
  * _strlen - function get length of string
- * @st: string to get length
- * Return: length of @st
+ * @str: string to get length
+ * Return: length of @str
 */
 
-int strlen(const char *str)
+int _strlen(const char *str)
 {
 	int length = 0;
 
-	while (*st++)
+	while (*str++)
 		length++
 	return (length);
 }
 
 /**
- * strcpy - function that return @loc with copy of string from @src
+ * _strcpy - function that return @loc with copy of string from @src
  *
  * @src: string to copy
  * @loc: location to copy in
@@ -29,7 +29,7 @@ char *_strcpy(char *loc, char *src)
 {
 	int i;
 
-	for(i = 0; src[i]; i++)
+	for (i = 0; src[i]; i++)
 		loc[i] = src[i];
 	loc[i] = '\0';
 
@@ -50,7 +50,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 
-	if(!name || age < 0 || !owner)
+	if (!name || age < 0 || !owner)
 		return (NULL);
 	dog = (dog_t *) malloc(sizeof(dog_t));
 
