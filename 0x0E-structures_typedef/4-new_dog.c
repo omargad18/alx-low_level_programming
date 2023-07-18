@@ -25,7 +25,7 @@ int strlen(const char *str)
  * Return: @loc
 */
 
-char *_strcpy(char *loc. char *src)
+char *_strcpy(char *loc, char *src)
 {
 	int i;
 
