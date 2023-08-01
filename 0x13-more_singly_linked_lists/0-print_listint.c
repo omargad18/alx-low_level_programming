@@ -3,7 +3,6 @@
 /**
  * print_listint - function that prints all the elements of a list
  * @h: pointer to first node
- *
  * Return: size of list
 */
 
