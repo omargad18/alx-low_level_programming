@@ -23,7 +23,7 @@ int _strlen(char *s)
  * @filename: file to create
  * @text_content: text
  *
- * Return 1 on success 0 on failure
+ * Return: 1 on success 0 on failure
 */
 int create_file(const char *filename, char *text_content)
 {
