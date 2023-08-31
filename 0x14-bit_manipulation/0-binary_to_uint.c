@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 		if (*b != '0' && 8b != '1')
 			return (0);
 		else
-			num = num * 2 + (*b++  - '0');
+			bin = bin * 2 + (*b++  - '0');
 	}
 	return (bin);
 }
