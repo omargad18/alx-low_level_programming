@@ -152,7 +152,7 @@ void print_osabi_more(Elf64_Ehdr h)
 }
 
 /**
- * print_abiversion - function print ELF ABI version
+ * print_abriversion - function print ELF ABI version
  * @h: ELF header struct
 */
 
@@ -163,7 +163,7 @@ void print_abriversion(Elf64_Ehdr h)
 }
 
 /**
- * prit_type - function prints ELF type
+ * print_type - function prints ELF type
  * @h: ELF header struct
 */
 
