@@ -12,7 +12,7 @@ void print_magic(Elf64_Ehdr h)
 	int itr;
 
 	printf("  Magic:   ");
-	for (itr = 0; itr < EI_NIDNET; itr++)
+	for (itr = 0; itr < EI_NIDENT; itr++)
 		printf("%2.2x%s", h.e_ident[itr], itr == EI_NIDENT - 1 ? "\n" : " ");
 }
 
@@ -253,8 +253,8 @@ int main(int ac, char **av)
 	if (file == -1)
 		dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]), exit(98);
 	bytes = read(file, &header, sizeof(header));
-	if (bytes < 1, || bytes != sizeof(header))
-		dprint(STDERR_FILENO, "Can't read from file: %s\n", av[1], exit(98);
+	if (bytes < 1 || bytes != sizeof(header))
+		dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1], exit(98);
 	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' &&
 		h.e_ident[2] == 'L' && h.e_ident[3] == 'F')
 	{
