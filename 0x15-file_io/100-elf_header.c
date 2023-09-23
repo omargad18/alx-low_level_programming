@@ -152,11 +152,11 @@ void print_osabi_more(Elf64_Ehdr h)
 }
 
 /**
- * print_abriversion - function print ELF ABI version
+ * print_abiversion - function print ELF ABI version
  * @h: ELF header struct
 */
 
-void print_abriversion(Elf64_Ehdr h)
+void print_abiversion(Elf64_Ehdr h)
 {
 	printf(" ABI Version:                       %d\n",
 			h.e_ident[EI_ABIVERSION]);
@@ -268,11 +268,11 @@ int main(int ac, char **av)
 	print_data(h);
 	print_version(h);
 	print_osabi(h);
-	print_abriversion(h);
+	print_abiversion(h);
 	print_type(h);
 	print_entry(h);
 	if (close(file))
-	dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
+		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
 
 	return (EXIT_SUCCESS);
 }
