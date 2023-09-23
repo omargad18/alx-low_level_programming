@@ -244,7 +244,7 @@ void print_entry(Elf64_Ehdr h)
 int main(int ac, char **av)
 {
 	int file;
-	Elf64_Ehdr header;
+	Elf64_Ehdr h;
 	ssize_t bytes;
 
 	if (ac != 2)
@@ -252,8 +252,8 @@ int main(int ac, char **av)
 	file = open(av[1], O_RDONLY);
 	if (file == -1)
 		dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]), exit(98);
-	bytes = read(file, &header, sizeof(header));
-	if (bytes < 1 || bytes != sizeof(header))
+	bytes = read(file, &h, sizeof(h));
+	if (bytes < 1 || bytes != sizeof(h))
 		dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1]), exit(98);
 	if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' &&
 		h.e_ident[2] == 'L' && h.e_ident[3] == 'F')
@@ -263,16 +263,16 @@ int main(int ac, char **av)
 	else
 		dprintf(STDERR_FILENO, "Not ELF FILE: %s\n", av[1]), exit(98);
 
-	print_magic(header);
-	print_class(header);
-	print_data(header);
-	print_version(header);
-	print_osabi(header);
-	print_abiversion(header);
-	print_type(header);
-	print_entry(header);
+	print_magic(h);
+	print_class(h);
+	print_data(h);
+	print_version(h);
+	print_osabi(h);
+	print_abriversion(h);
+	print_type(h);
+	print_entry(h);
 	if (close(file))
-	dprint(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
+	dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
 
 	return (EXIT_SUCCESS);
 }
