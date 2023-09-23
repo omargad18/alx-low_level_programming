@@ -24,8 +24,8 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
 	from_file = open(av[1], O_RDONLY);
 	if (from_file == -1)
-		dprintf(STDERR_FILENO, ERR_NOREAD, ac[1]), exit(98);
-	to_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
+		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
+	to_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSION);
 	if (to_file == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 
